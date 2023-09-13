@@ -1,0 +1,115 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Frank+Ruhl+Libre:wght@400;500&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+/* ============hs wait_scroll / show_trigger============ */
+.show_trigger, .show_trigger_slick{ position: absolute; bottom: -75px; left: 50%; width: 1px; height: 1px;}
+#about_us .box_con .show_trigger{bottom: 120px;}
+#slogan .show_trigger{bottom: 100px;}
+#men_care .cntnt_con .show_trigger {bottom: 30px;}
+#men_care .cntnt_con .show_trigger_slick{bottom: 240px;}
+
+.title_con{ position: relative; z-index: 1; }
+.title_con.wait_scroll{}
+.title_con.wait_scroll h1, .title_con.wait_scroll h2{ opacity: 0; transform: translateY(20px); }
+.title_con.wait_scroll h1:after {transform: translate(-50%, calc(-50% + 20px));}
+.title_con h1, .title_con h1:after, .title_con h2{ transition: all 0.5s ease-out; }
+
+.title_con h1{ transition-delay: 0.25s; }
+.title_con h1:after{ transition-delay: 0.3s; }
+.title_con h2{ transition-delay: 0.5s; }
+
+#about_us .box_con, #men_care .txt_con, #men_care .box_con {position: relative; transition: all 1s ease-in-out; margin-top: 40px;}
+.box_con.wait_scroll,.txt_con.wait_scroll  { opacity: 0; transform: translateY(40px); }
+/* ============hs wait_scroll / show_trigger============ */
+
+/* font-family: 'Archivo', sans-serif; font-family: 'Roboto', sans-serif; */
+html, body{font-family: 'Roboto', sans-serif; font-weight: 400; font-size: 14px; min-width: 1200px; max-width: 1920px; margin: 0 auto;}
+input, select, textarea, option { font-family: 'Roboto', sans-serif; }
+h1,h2,h3,h4,h5,h6{position: relative;}
+h1, h3{text-transform: uppercase;}
+h1, h2{text-align: center;}
+h2, h4{}
+h1{font-family:'Archivo', sans-serif; font-size: 30px; font-weight: 700; color: #00136f; margin-bottom: 30px;}
+h1:after{content: ""; width: 170px; height: 2px; background-color: #00136f; position: absolute; left: 50%; bottom: -14px; transform: translate(-50%, -50%);}
+h2{font-size: 15px; font-weight: 500; margin-bottom: 60px;}
+h3{font-size: 20px; font-weight: 500; margin-bottom: 15px; color: #00136f; }
+h4{line-height: 16px;}
+h5{font-size: 12px;}
+/* body layout */
+.wrap{}
+.wrap > *{}
+.sections{ position: relative; }
+.width_con{ position: relative; width: 1200px; margin: 0 auto; padding: 120px 0; }
+
+/* header */
+#header.transparent_color {background-color: transparent;}
+#header{position: fixed; width: 100%; background-color: #00136f; height: 80px; top: 0px; left: 0px; transition: all 0.2s linear; z-index: 99999;}
+#header:hover { background-color: #00136f; }
+#header div.width_con{padding: 0;}
+#header .width_con .btn_home{position: relative; top: 25px; width: 120px; height: 30px; display: block;}
+#header .width_con .btn_home .logo{transition: all 0.2s ease;}
+#header .width_con .btn_home .transparent{opacity: 0;}
+/* nav영역 */
+#header .width_con .nav{position: absolute; top: 36px; right: 0;}
+/* 드롭다운 영역 */
+#header .width_con .nav::after {content: ""; opacity: 0; position: fixed; top: 290px; width: 1920px; height: 1px; left: 50%; margin-left: -960px; background-color: #fff; box-shadow: 0 10px 10px 0 rgba(61, 61, 61, 0.4); transition: all 0.35s ease-in-out 0.15s; background: transparent; z-index: 998;}
+#header .width_con .nav.open::after { opacity: 1; transition: all 0.35s ease-in-out 0.15s;}
+/* 드롭다운 text영역 */
+#header .width_con .nav li{position: relative; display: inline-block; *display: inline; *zoom: 1; height: 44px; margin: 0 0 0 55px; text-transform: uppercase; cursor: pointer;}
+#header .width_con ul.nav li dl .txt_con{width: 456px; position: absolute; top: 30px;}
+#header .width_con ul.nav li dl .txt_con .txt_area{ display: inline-block; height: 100%; width: calc(25% - 15px); margin-right: 15px; vertical-align: top;}
+#header .width_con ul.nav li dl .txt_con .txt_area dt:hover{color: #0039ff;}
+#header .width_con ul.nav li dl .txt_con .txt_area dt{font-weight: 500; margin-bottom: 15px; transition: all 0.2s linear;}
+#header .width_con ul.nav li dl .txt_con .txt_area dd.txt{line-height: 20px;}
+#header .width_con ul.nav li dl .txt_con .txt_area dd.txt a{font-size: 12px; text-transform: capitalize; cursor: pointer; border-bottom: 1px solid #fff; text-decoration: none; transition: all 0.2s linear;}
+#header .width_con ul.nav li dl .txt_con .txt_area dd.txt a:hover{color: #00136f; border-color: #00136f;}
+/* bar */
+#header .width_con .nav li > a::after{content: ""; position: absolute; background-color: transparent; width: 100%; height: 2px; top: 26px; left: 50%; transform: translate(-50%, 0); transition: inherit;}
+#header .width_con .nav li:hover > a::after{background-color: #8cd6fc;}
+/* hover 시 text 효과영역 */
+#header .width_con .nav li > a{color: white; font-size: 16px; font-weight: 500; transition: all 0.2s linear;}
+#header .width_con .nav li:hover > a{color: #8cd6fc;}
+#header .width_con .nav li dl { position: fixed; top: 80px; width: 1200px; height: 0px; padding: 0; left: 50%; margin-left: -600px; box-shadow: 360px 0 0 0 #fff, -360px 0 0 0 #fff; background: rgb(255, 255, 255); border-top: 0px solid rgba(0,0,0,0); line-height: 1.25em; overflow: hidden; transition: all 0.35s ease-in-out; display: inline-block; z-index: 999;}
+#header .width_con .nav li:hover dl{height: 215px;}
+#header .width_con ul.nav li dl .txt_con, #header .width_con ul.nav li dl .img_con {height: 155px; display: inline-block;}
+/* 이미지 */
+#header .width_con ul.nav li dl .img_con{width: 582px; background-color: #fff; margin: 30px 175px 0 0; }
+#header .width_con ul.nav li dl .img_con .img_left, #header .width_con ul.nav li dl .img_con .img_right{width: calc(50% - 18px); }
+#header .width_con ul.nav li dl .img_con .img_left{margin-right: 36px;}
+/* 언어변경 */
+#header .width_con .nav li.lang{}
+#header .width_con .nav li.lang select{ background: transparent; border: 0; color: #fff; cursor: pointer;}
+#header .width_con .nav li.lang select option{color: #000;}
+#header .width_con .nav li.lang select:focus, #header .width_con .nav li.lang select:active{outline: none;}
+
+/* footer */
+#footer{background-color: #00136f;}
+#footer .width_con{padding: 0; height: 100%;}
+#footer .width_con .box_con{color: #fff; position: relative; left: 0; padding: 120px 0px;}
+#footer .width_con .box_con .boxes{display: inline-block; position: relative; vertical-align: top;}
+#footer .width_con .box_con .boxes h3{color: #fff; margin-bottom: 30px;}
+#footer .width_con .box_con .boxes h5{line-height: 18px;}
+/* box_logo */
+#footer .width_con .box_con .box_logo{width: 600px;}
+#footer .width_con .box_con .box_logo a.btn_home img{width: 150px; position: relative; margin-bottom: 15px;}
+#footer .width_con .box_con .box_logo .txt_01{margin-top: 10px;}
+#footer .width_con .box_con .box_logo .txt_02{margin-top: 16px;}
+#footer .width_con .box_con .box_logo .txt_02 span{margin-right: 10px;}
+/* box_cs */
+#footer .width_con .box_con .box_cs{width: 224px;}
+#footer .width_con .box_con .box_cs ul{line-height: 24px; position: relative; top: -1px;}
+#footer .width_con .box_con .box_cs ul li{cursor: pointer; transition: all 0.2s ease;}
+#footer .width_con .box_con .box_cs ul li:hover{color: #8cd6fc;}
+/* box_news */
+#footer .width_con .box_con .box_news .email_field{position: relative;}
+#footer .width_con .box_con .box_news .email_field form{margin-top: 15px;}
+#footer .width_con .box_con .box_news .email_field input[type="email"]{width: 285px;height: 40px; border-top-left-radius: 25px; border-bottom-left-radius: 25px; font-size: 14px; padding: 0px 10px; border: 0px; vertical-align: middle;}
+#footer .width_con .box_con .box_news .email_field button{width: 67px; height: 40px; border: 0; padding: 0; border-bottom-right-radius: 25px; border-top-right-radius: 25px; vertical-align: middle; margin-left: 4px; background-color: #d4d4d4; cursor: pointer; transition: all 0.2s ease;}
+#footer .width_con .box_con .box_news .email_field input:focus, #footer .width_con .box_con .box_news .email_field input:active{outline: none;}
+#footer .width_con .box_con .box_news .email_field button:hover{ background-color: #8cd6fc;}
+/* 카피라이트 */
+#footer .width_con .copy{position: absolute; bottom: 30px; left: 50%; margin-left: -110px;}
+#footer .width_con .copy h5{color: #fff;}
+/* 아이콘 제어 */
+#footer .width_con .box_con .boxes i.far{font-size: 18px; margin-right: 5px;}
+#footer .width_con .box_con .box_cs ul i.fa-chevron-right{font-size: 5px; margin-right: 5px;}
+#footer .width_con .box_con .box_news .email_field button i.fa-paper-plane{color: #00136f;}
